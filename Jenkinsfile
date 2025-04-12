@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        APP_DIR = '/home/ubuntu/Flask-jenkins-app'
+        APP_DIR = '/home/ubuntu/Flask-jenkins-aws-app'
     }
     stages {
         stage('Clone Repo' {
