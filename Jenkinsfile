@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/chinedunewbirth/Flask-jenkins-aws-app.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/chinedunewbirth/Flask-jenkins-aws-app.git'
             }
         }
 
