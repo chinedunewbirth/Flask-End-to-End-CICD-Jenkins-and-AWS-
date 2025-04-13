@@ -7,9 +7,9 @@ pipeline {
 
     stages {
         stage('Clone Repo') {
-            steps {
-                git credentialsId: 'github-creds', url: 'https://github.com/chinedunewbirth/Flask-jenkins-aws-app.git'
-            }
+            sshagent(['github-ssh-key']) {
+                    git branch: 'main', credentialsId: 'github-ssh-key', url: 'git@github.com:chinedunewbirth/Flask-jenkins-aws-app.git'
+                }
         }
 
         stage('Install Dependencies') {
