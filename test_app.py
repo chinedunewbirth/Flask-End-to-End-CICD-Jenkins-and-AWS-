@@ -12,6 +12,7 @@ class FlaskAppTestCase(unittest.TestCase):
     def test_home_content(self):
         response = self.client.get('/')
         self.assertIn(b'Welcome to Flask Jenkins AWS App', response.data)
+        self.assertIn(b'Flask Jenkins AWS App', response.data)
 
 if __name__ == '__main__':
     unittest.main()
